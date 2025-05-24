@@ -19,7 +19,7 @@
 ### Authors
 
 - [**Mykhailo Hurniy**](https://github.com/Miha77777ua)
-- [**David**](https://github.com/SherlokHolmss)
+- [**David Chylovskyi**](https://github.com/SherlokHolmss)
 - [**Ivan Turcyn**](https://github.com/IvanTurcyn15)
 - [**Vladyslava Martyniuk**](https://github.com/vladyslava-martyniuk)
 
