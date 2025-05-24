@@ -22,5 +22,5 @@
 - [**David Chylovskyi**](https://github.com/SherlokHolmss)
 - [**Ivan Turcyn**](https://github.com/IvanTurcyn15)
 - [**Vladyslava Martyniuk**](https://github.com/vladyslava-martyniuk)
-- [Daniil Moiseiev](https://github.com/DangerousBlock)
+- [**Daniil Moiseiev**](https://github.com/DangerousBlock)
 
