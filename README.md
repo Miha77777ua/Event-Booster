@@ -1,6 +1,6 @@
 # [Event-Booster](https://miha77777ua.github.io/Event-Booster/)
 
-*Event Booster is a project to find a buy a ticket for specific music event✨*
+*Event Booster is a project to find and buy a ticket for specific music event✨*
 
 ### App support:
 
