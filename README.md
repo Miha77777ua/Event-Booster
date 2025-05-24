@@ -19,7 +19,8 @@
 ### Authors
 
 - [**Mykhailo Hurniy**](https://github.com/Miha77777ua)
-- [**David**](https://github.com/SherlokHolmss)
-- [**Ivan Turcyn**](https://github.com/IvanTurcyn15)
+- [**David Chylovskyi**](https://github.com/SherlokHolmss)
+- [**Ivan Turchyn**](https://github.com/IvanTurcyn15)
 - [**Vladyslava Martyniuk**](https://github.com/vladyslava-martyniuk)
+- [**Daniil Moiseiev**](https://github.com/DangerousBlock)
 
