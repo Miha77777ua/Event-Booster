@@ -1,5 +1,5 @@
 {
-  "dependencies": {
-    "dotenv": "^16.5.0"
+  "devDependencies": {
+    "vite": "^6.3.5"
   }
 }
