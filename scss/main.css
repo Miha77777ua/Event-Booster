@@ -1,0 +1,39 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+.cards-item {
+  flex-basis: calc((100% - 168px) / 4);
+}
+.cards-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 180px;
+  height: 227px;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 767px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    max-width: 1200px;
+  }
+}
+
+.header__title {
+  font-weight: 900;
+  font-size: 50px;
+  text-align: center;
+  color: #dc56c5;
+}/*# sourceMappingURL=main.css.map */
