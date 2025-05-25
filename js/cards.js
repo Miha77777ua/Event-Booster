@@ -9,6 +9,7 @@ async function cards(page) {
       "beforeend",
       `
       <li class="cards-item">
+        <div class="cards-deco"></div>
         <img src="${el.images.find(el => el.width === 640 && el.height === 427).url}" class="cards-image">
         <h2 class="cards-title">${el.name}</h2>
         <p class="cards-date">${el.dates.start.localDate}</p>
