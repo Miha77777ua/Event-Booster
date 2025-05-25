@@ -1,0 +1,3 @@
+@mixin gridSystem($gapSumm, $rowElements) {
+    flex-basis: calc((100% - $gapSumm) / $rowElements);
+}
