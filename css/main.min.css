@@ -1,1 +1,1 @@
-h1{color:#ff0}/*# sourceMappingURL=main.min.css.map */
+.cards{display:flex;flex-wrap:wrap;gap:56px}.cards-item{flex-basis:calc((100% - 168px)/4)}.cards-image{object-fit:cover;width:180px;height:227px}/*# sourceMappingURL=main.min.css.map */

@@ -1,0 +1,15 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 56px;
+
+  &-item {
+    @include gridSystem(168px, 4);
+  }
+
+  &-image {
+    object-fit: cover;
+    width: 180px;
+    height: 227px;
+  }
+}
