@@ -89,8 +89,7 @@ label {
 }
 .cards-image {
   padding-top: 13px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 228px;
   height: 295px;
   border-top-left-radius: 50px;
@@ -116,24 +115,25 @@ label {
 }
 
 .header {
-  background-image: url("../images/bg_header_mob.jpg");
+  background-image: url("./images/bg_header_mob.jpg");
   background-position: center;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 @media screen and (min-width: 768px) {
   .header {
-    background-image: url("../images/bg_header_tab.jpg");
+    background-image: url("./images/bg_header_tab.jpg");
     padding-top: 150px;
     padding-bottom: 150px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header {
-    background-image: url("../images/bg_header_desk.jpg");
+    background-image: url("./images/bg_header_desk.jpg");
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -144,7 +144,7 @@ label {
   font-weight: 900;
   font-size: 18px;
   text-align: center;
-  color: #FFFFFF;
+  color: #dc56c5;
   margin-bottom: 25px;
 }
 @media screen and (min-width: 768px) {
@@ -156,6 +156,19 @@ label {
   .header__title {
     font-size: 50px;
   }
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .main {
