@@ -1,11 +1,19 @@
 export function initDropdown() {
-    const opinions = document.querySelectorAll(".options li");
     const dropdown = document.querySelector(".dropdown");
-    const summary = document.getElementById("selected-option"); 
+    const summary = document.getElementById("selected-option");
+    const list = dropdown.querySelector(".options");
 
-    if (!opinions.length || !summary || !dropdown) return;
+    if (!list || !summary || !dropdown) return;
 
-    opinions.forEach((el) => {
+    
+    const items = Array.from(list.querySelectorAll("li"));
+    const sortedItems = items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+
+    list.innerHTML = "";
+    sortedItems.forEach(el => {
+        list.appendChild(el);
+
         el.addEventListener("click", () => {
             summary.textContent = el.textContent;
             dropdown.removeAttribute("open");
