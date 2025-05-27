@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="./css/main.min.css" rel="stylesheet">
+    <link href="./scss/main.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -19,14 +19,15 @@
   srcset="
     ./images/logo_header_tab.png 359w,
     ./images/logo_header_desk.png 477w,
-    ./images/logo_header_mob.png 450w"
-  sizes="(min-width: 1200px) 477px, (min-width: 768px) 359px, 100vw"
+    ./images/logo_header_mob.png 214w"
+  sizes="(min-width: 1200px) 477px, (min-width: 768px) 359px, 214px"
   src="./images/logo_header_mob.png"
   alt="Logo">
         </div>
        <h1 class="header__title">FIND BEST EVENTS <br>
           AROUND THE WORLD
        </h1>
+       
        <div class="header__inputs">
         <div class="header__input-seach">
           <input class="header__input" type="text" placeholder="Start searching">
@@ -35,15 +36,30 @@
           </button>
         </div>
          <div class="header__input-filter">
-          <div class="dropdown-toggle">Choose country</div>
-    <div class="dropdown-menu">
-      <div data-value=""></div>
-      <div data-value=""></div>
-      <div data-value=""></div>
-      <div data-value=""></div>
+          <details class="dropdown">
+  <summary id="selected-option">Оберіть варіант</summary>
+  <ul class="options">
+    <li data-value="0">Ausria</li>
+    <li data-value="1">Australia</li>
+    <li data-value="2">Belgium</li>
+    <li data-value="3">Brasil</li>
+    <li data-value="4">Canada</li>
+    <li data-value="5">Czech Republic</li>
+    <li data-value="6">Chile</li>
+    <li data-value="7">Denmark</li>
+    <li data-value="8">Germany</li>
+    <li data-value="9">Spain</li>
+    <li data-value="10">France</li>
+   <li data-value="11">Ireland</li>
+   <li data-value="12">Isrel</li>
+   <li data-value="13">Italy</li>
+   <li data-value="14">Cyprus</li>
+   <li data-value="15">Mexico</li>
+   <li data-value="16">Nederlands</li>
+   <li data-value="17">Norway</li>
+  </ul>
+</details>
 
-      </div>
-    </div>
          </div>
        </div>
     </header>
