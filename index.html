@@ -13,37 +13,32 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <div class="header__logo">
-            <img 
-  class="header__img"
-  srcset="
-    ./images/logo_header_tab.png 359w,
-    ./images/logo_header_desk.png 477w,
-    ./images/logo_header_mob.png 450w"
-  sizes="(min-width: 1200px) 477px, (min-width: 768px) 359px, 100vw"
-  src="./images/logo_header_mob.png"
-  alt="Logo">
-        </div>
+        <a class="header__logo">
+            <img
+              class="header__img"
+              srcset="
+                ./images/logo_header_tab.png 359w,
+                ./images/logo_header_desk.png 477w,
+                ./images/logo_header_mob.png 450w"
+              sizes="(min-width: 1200px) 477px, (min-width: 768px) 359px, 100vw"
+              src="./images/logo_header_mob.png"
+              alt="Logo">
+        </a>
        <h1 class="header__title">FIND BEST EVENTS <br>
           AROUND THE WORLD
        </h1>
        <div class="header__inputs">
-        <div class="header__input-seach">
-          <input class="header__input" type="text" placeholder="Start searching">
-          <button class="header__btn">
-            <img src="./images/search-icon_header.svg" alt="search">
-          </button>
-        </div>
-         <div class="header__input-filter">
-          <div class="dropdown-toggle">Choose country</div>
-    <div class="dropdown-menu">
-      <div data-value=""></div>
-      <div data-value=""></div>
-      <div data-value=""></div>
-      <div data-value=""></div>
-
-      </div>
-    </div>
+       <div class="header__input-search">
+         <input class="header__input" type="text" placeholder="Start searching" />
+         <button class="header__btn">
+           <img src="./images/search-icon_header.svg" alt="search" />
+         </button>
+       </div>
+       <div class="header__input-filter">
+         <div class="dropdown-toggle">Choose country</div>
+         <div class="dropdown-menu"></div>
+       </div>
+     </div>
          </div>
        </div>
     </header>

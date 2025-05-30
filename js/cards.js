@@ -1,10 +1,8 @@
-async function cards(page) {
+function render(data) {
   const list = document.querySelector(".cards");
+  list.innerHTML = "";
 
-  const data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?source=ticketmaster&size=20&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
-  const cards = await data.json();
-
-  cards._embedded.events.forEach(el => {
+  data._embedded.events.forEach(el => {
     list.insertAdjacentHTML(
       "beforeend",
       `
@@ -20,4 +18,12 @@ async function cards(page) {
   });
 }
 
-export default cards;
+
+async function cards(page) {
+  const data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?source=ticketmaster&size=20&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+  const cards = await data.json();
+
+  render(cards);
+}
+
+export { cards, render };
