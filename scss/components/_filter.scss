@@ -70,15 +70,17 @@
 
 .dropdown-menu {
   display: none;
+  background-color: #ccc;
   position: absolute;
-  background-color: white;
   z-index: 1000;
   max-height: 300px;
   overflow-y: auto;
   border: 1px solid #ccc;
   width: 100%;
   border-radius: 20px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .dropdown-menu.show {
@@ -88,7 +90,6 @@
 .dropdown-item {
   padding: 10px 30px;
   height: 40px;
-  border-radius: 20px;
   background-color: #ccc;
   backdrop-filter: blur(20px);
   color: black;
@@ -96,6 +97,11 @@
   cursor: pointer;
   user-select: none;
   text-align: center;
+  border-top: 1px solid #999999;
+
+  &:first-child {
+    border-top: 0;
+  }
 }
 
 .dropdown-item:hover {

@@ -31,8 +31,25 @@
 //     object-fit: contain;
 // }
 
-.header{
-    height: 387px;
-    background-color: gray;
-    padding-top: 40px;
+.header {
+  background-image: url('../images/bg_header_mob.jpg'); 
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 100px; 
+  padding-bottom: 100px;
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/bg_header_tab.jpg'); 
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url('../images/bg_header_desk.jpg');
+    padding-top: 50px;
+    padding-bottom: 200px;
+  }
 }

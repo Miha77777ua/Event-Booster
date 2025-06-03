@@ -1,6 +1,8 @@
 .cards {
   display: flex;
+  position: relative;
   flex-wrap: wrap; 
+  min-height: 500px;
   gap: 56px;
 
   &-item {
@@ -66,4 +68,21 @@
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
   }
+}
+
+.error {
+  // height: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #DC56C5;
+  text-align: center;
 }

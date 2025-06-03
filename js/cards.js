@@ -1,6 +1,13 @@
+import dataFromJSON from "./countries.json";
+
 function render(data) {
   const list = document.querySelector(".cards");
   list.innerHTML = "";
+
+  if (data === "Data not found!") {
+    list.insertAdjacentHTML("beforeend", `<h1 class="error">${data} Please, try something else!</h1>`)
+    return;
+  }
 
   data._embedded.events.forEach(el => {
     list.insertAdjacentHTML(
@@ -18,12 +25,42 @@ function render(data) {
   });
 }
 
-
 async function cards(page) {
-  const data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?source=ticketmaster&size=20&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
-  const cards = await data.json();
+  const country = document.querySelector(".dropdown-toggle").textContent;
+  const searchValue = document.querySelector(".header__input").value;
 
-  render(cards);
+  try {
+    if (country === "Choose country") {
+      let data;
+
+      if (searchValue !== "") {
+        data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&keyword=${searchValue}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+      } else {
+        data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+      }
+
+      const cards = await data.json();
+
+      render(cards);
+    } else {
+      const code = dataFromJSON.find(el => el.name === country).countryCode;
+
+      let data;
+
+      if (searchValue !== "") {
+        console.log("hi");
+        data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&keyword=${searchValue}&countryCode=${code}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+      } else {
+        data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&countryCode=${code}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+      }
+
+      const cards = await data.json();
+
+      render(cards);
+    }
+  } catch (err) {
+    render("Data not found!");
+  }
 }
 
 export { cards, render };
