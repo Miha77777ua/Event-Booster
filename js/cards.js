@@ -1,10 +1,17 @@
-async function cards(page) {
+import dataFromJSON from "./countries.json";
+import { renderPagination } from "./pagination.js";
+
+function render(data) {
   const list = document.querySelector(".cards");
 
-  const data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?source=ticketmaster&size=20&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
-  const cards = await data.json();
+  list.innerHTML = "";
 
-  cards._embedded.events.forEach(el => {
+  if (data === "Data not found!") {
+    list.insertAdjacentHTML("beforeend", `<h1 class="error">${data} Please, try something else!</h1>`)
+    return;
+  }
+
+  data._embedded.events.forEach(el => {
     list.insertAdjacentHTML(
       "beforeend",
       `
@@ -20,4 +27,36 @@ async function cards(page) {
   });
 }
 
-export default cards;
+async function cards(page) {
+  const country = document.querySelector(".dropdown-toggle").textContent;
+  const searchValue = document.querySelector(".header__input").value;
+
+  try {
+    let data;
+
+    if (country === "Choose country") {
+      if (searchValue !== "") {
+        data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&keyword=${searchValue}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+      } else {
+        data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+      }
+    } else {
+      const code = dataFromJSON.find(el => el.name === country).countryCode;
+
+      if (searchValue !== "") {
+        data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&keyword=${searchValue}&countryCode=${code}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+      } else {
+        data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&countryCode=${code}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
+      }
+    }
+
+    const json = await data.json();
+
+    render(json);
+    renderPagination(json.page.number + 1, json.page.totalPages);
+  } catch (err) {
+    render("Data not found!");
+  }
+}
+
+export { cards, render };
