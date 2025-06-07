@@ -1,3 +1,10 @@
 import cards from "./cards.js";
+import { initDropdown } from "./dropdown.js";
+import { loadAndPopulateCountries } from "./getCountries.js";
 
-cards(1);
+initDropdown();
+
+loadAndPopulateCountries().then(() => {
+  cards(1);
+});
+
