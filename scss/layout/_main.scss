@@ -1,1 +1,30 @@
+.main {
+  background-color: #0e0e0e;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.pagination-button{
+  width: 30px;
+  height: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-button:hover{
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid rgba(220, 86, 197, 1);
+}
+.dots{
+    color: white;
+}
 
