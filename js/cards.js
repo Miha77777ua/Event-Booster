@@ -3,6 +3,7 @@ import { renderPagination } from "./pagination.js";
 
 function render(data) {
   const list = document.querySelector(".cards");
+
   list.innerHTML = "";
 
   if (data === "Data not found!") {
@@ -52,7 +53,7 @@ async function cards(page) {
     const json = await data.json();
 
     render(json);
-    renderPagination(json.page.number + 1, json.page.totalPages); 
+    renderPagination(json.page.number + 1, json.page.totalPages);
   } catch (err) {
     render("Data not found!");
   }
