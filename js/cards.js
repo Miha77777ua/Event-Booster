@@ -43,6 +43,7 @@ async function cards(page) {
       const cards = await data.json();
 
       render(cards);
+      renderPagination(cards.page.number + 1, cards.page.totalPages);
     } else {
       const code = dataFromJSON.find(el => el.name === country).countryCode;
 
