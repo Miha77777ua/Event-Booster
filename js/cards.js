@@ -1,4 +1,5 @@
 import dataFromJSON from "./countries.json";
+import { renderPagination } from "./pagination.js";
 
 function render(data) {
   const list = document.querySelector(".cards");
@@ -13,7 +14,7 @@ function render(data) {
     list.insertAdjacentHTML(
       "beforeend",
       `
-      <li class="cards-item">
+      <li class="cards-item" data-id="${el.id}">
         <div class="cards-deco"></div>
         <img src="${el.images.find(el => el.width === 640 && el.height === 427).url}" class="cards-image">
         <h2 class="cards-title">${el.name}</h2>
@@ -30,9 +31,9 @@ async function cards(page) {
   const searchValue = document.querySelector(".header__input").value;
 
   try {
-    if (country === "Choose country") {
-      let data;
+    let data;
 
+    if (country === "Choose country") {
       if (searchValue !== "") {
         data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&keyword=${searchValue}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
       } else {
@@ -48,15 +49,15 @@ async function cards(page) {
       let data;
 
       if (searchValue !== "") {
-        console.log("hi");
         data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&keyword=${searchValue}&countryCode=${code}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
       } else {
         data = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?size=20&countryCode=${code}&page=${page}&apikey=${import.meta.env.VITE_API_KEY}`);
       }
 
-      const cards = await data.json();
+      const json = await data.json();
 
-      render(cards);
+      render(json);
+      renderPagination(json.page.number + 1, json.page.totalPages);
     }
   } catch (err) {
     render("Data not found!");
