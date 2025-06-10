@@ -36,6 +36,7 @@ function setupDropdown() {
 
 function setupSearch() {
   search.addEventListener("input", () => cards(1));
+
 }
 
 export { setupDropdown, setupSearch };

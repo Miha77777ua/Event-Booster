@@ -14,7 +14,7 @@
     display: none;
     top: 50%;
     left: 50%;
-    width: 272px;
+    width: 400px;
     height: 597px;
     border-top-left-radius: 150px;
     border-bottom-right-radius: 150px;
@@ -34,11 +34,12 @@
 }
 
 .modal-list{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
     &-title{
         font-family: Montserrat;
@@ -58,12 +59,14 @@
         line-height: 100%;
         letter-spacing: 0%;
         text-align: center;
+        margin-top: 10px;
     }
 }
 
 .modal-author-btn{
+    display: block;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 40px;
     font-family: Montserrat;
     font-weight: 500;
     font-size: 16px;
@@ -102,6 +105,3 @@
   text-align: center;
 }
 
-.location-desc{
-    margin-top: 3px;
-}

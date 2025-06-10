@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="./scss/main.css" rel="stylesheet">
+    <link href="./css/main.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -29,10 +29,10 @@
        </h1>
        <div class="header__inputs">
        <div class="header__input-search">
-         <input class="header__input" type="text" placeholder="Start searching" />
-         <button class="header__btn">
-           <img src="./images/search-icon_header.svg" alt="search" />
-         </button>
+          <input class="header__input" type="text" placeholder="Start searching" />
+          <svg class="header-search-icon" widht="12" height="12">
+            <use href="./images/symbol-defs.svg#search-icon_header"></use>
+          </svg>
        </div>
        <div class="header__input-filter">
          <div class="dropdown-toggle">Choose country</div>
@@ -53,9 +53,7 @@
     <div class="backdrop">
       <div class="modal">
         <img class="modal-img" src="" alt="Image">
-          <ul class="modal-list">
-            
-          </ul>
+          <ul class="modal-list"></ul>
           <button class="modal-author-btn">MORE FROM THIS AUTHOR</button>
           <button class="modal-close-btn">
             <svg class="modal-close-svg" width="17" height="17">
