@@ -19,7 +19,7 @@ function render(data) {
         <img src="${el.images.find(el => el.width === 640 && el.height === 427).url}" class="cards-image">
         <h2 class="cards-title">${el.name}</h2>
         <p class="cards-date">${el.dates.start.localDate}</p>
-        <p class="cards-place">${el._embedded.venues[0].name}</p>
+        <p class="cards-place">${el._embedded.venues[0].name || "Not found :("}</p>
       </li> 
       `
     )
