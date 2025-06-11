@@ -22,9 +22,15 @@
 }
 .header__title{
     font-weight: 900;
-    font-size: 50px;
+    font-size: 25px;
     text-align: center;
     color: #dc56c5;
+   @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }    
+    @media screen and (min-width: 1280px) {
+      font-size: 50px;
+    }
 }
 
 .header__logo{
@@ -67,4 +73,17 @@
     padding-top: 50px;
     padding-bottom: 200px;
   }
+}
+.header__inputs{
+   display: block;
+   @media screen and (min-width: 768px) {
+    display: flex; 
+    gap: 30px;
+}
+}
+.header__input-search{
+    width: 270px;
+    margin-bottom: 25px;
+    @media screen and (min-width: 768px) {
+    }
 }
