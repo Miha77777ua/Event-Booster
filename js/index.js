@@ -1,10 +1,8 @@
-import cards from "./cards.js";
-import { initDropdown } from "./dropdown.js";
-import { loadAndPopulateCountries } from "./getCountries.js";
+import { cards } from "./cards.js";
+import { setupDropdown, setupSearch } from "./filter.js";
+import { renderModalData } from "./modal.js";
 
-initDropdown();
-
-loadAndPopulateCountries().then(() => {
-  cards(1);
-});
-
+setupDropdown();
+setupSearch();
+cards(1);
+renderModalData();

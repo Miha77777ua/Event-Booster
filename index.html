@@ -13,50 +13,56 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <div class="header__logo">
-            <img 
-  class="header__img"
-  srcset="
-    ./images/logo_header_tab.png 359w,
-    ./images/logo_header_desk.png 477w,
-    ./images/logo_header_mob.png 214w"
-  sizes="(min-width: 1200px) 477px, (min-width: 768px) 359px, 214px"
-  src="./images/logo_header_mob.png"
-  alt="Logo">
-        </div>
+        <a class="header__logo" href="./">
+          <img
+            class="header__img"
+            srcset="
+              ./images/logo_header_tab.png 359w,
+              ./images/logo_header_desk.png 477w,
+              ./images/logo_header_mob.png 450w"
+            sizes="(min-width: 1200px) 477px, (min-width: 768px) 359px, 100vw"
+            src="./images/logo_header_mob.png"
+            alt="Logo">
+        </a>
        <h1 class="header__title">FIND BEST EVENTS <br>
           AROUND THE WORLD
        </h1>
        
        <div class="header__inputs">
-        <div class="header__input-seach">
-          <input class="header__input" type="text" placeholder="Start searching">
-          <button class="header__btn">
-            <img src="./images/search-icon_header.svg" alt="search">
-          </button>
-        </div>
-         <div class="header__input">
-          <details class="dropdown">
-  <summary id="selected-option">Choose  country
-    <svg  class="custom-arrow" width="13" height="8" viewBox="0 0 13 8" fill="#939393" xmlns="http://www.w3.org/2000/svg">
-  <path d="M6.5 8L0.00480968 0.5L12.9952 0.499999L6.5 8Z" fill="#939393" />
-</svg>
-  </summary>
-  <ul class="options">
-    
-  </ul>
-</details>
-         </div>
+       <div class="header__input-search">
+          <input class="header__input" type="text" placeholder="Start searching" />
+          <svg class="header-search-icon" widht="12" height="12">
+            <use href="./images/symbol-defs.svg#search-icon_header"></use>
+          </svg>
        </div>
+       <div class="header__input-filter">
+         <div class="dropdown-toggle">Choose country</div>
+         <div class="dropdown-menu"></div>
+       </div>
+     </div>
+         </div>
     </header>
 
     <main class="main">
       <div class="container">
         <ul class="cards"></ul> 
       </div>
+      <ul class="pagination"></ul>
     </main>
 
     <footer class="footer"></footer>
+    <div class="backdrop">
+      <div class="modal">
+        <img class="modal-img" src="" alt="Image">
+          <ul class="modal-list"></ul>
+          <button class="modal-author-btn">MORE FROM THIS AUTHOR</button>
+          <button class="modal-close-btn">
+            <svg class="modal-close-svg" width="17" height="17">
+              <use href="./images/symbol-defs.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+      </div>
+    </div>
 
     <script type="module" src="./js/index.js"></script>
   </body>
