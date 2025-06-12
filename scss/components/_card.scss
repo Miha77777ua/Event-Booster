@@ -3,14 +3,31 @@
   position: relative;
   flex-wrap: wrap; 
   min-height: 500px;
-  gap: 56px;
+  gap: 20px;
+  
+  @media screen and (min-width: 768px) {
+    gap: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 56px;
+  }
+
 
   &-item {
     display: flex;
     flex-direction: column;
     gap: 5px;
     position: relative;
-    @include gridSystem(168px, 4);
+    @include gridSystem(20px, 2);
+
+    @media screen and (min-width: 768px) {
+      @include gridSystem(40px, 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include gridSystem(168px, 4);
+    }
   }
 
   &-title {
@@ -26,13 +43,21 @@
   &-deco {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 199px;
+    right: -10px;
+    width: 108px;
     height: 186px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     border-width: 1px;
-    border: 1px solid #DC56C54D
+    border: 1px solid #DC56C54D;
+
+    @media screen and (min-width: 768px) {
+      width: 199px;
+    }
+
+    @media screen and (min-width: 1200px) {   
+      right: 0;
+    }
   }
 
   &-date {
