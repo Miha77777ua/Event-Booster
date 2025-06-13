@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "vite": "^6.3.5"
+  },
+  "scripts": {
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "deploy": "gh-pages -d dist"
   }
 }
