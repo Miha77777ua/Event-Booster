@@ -9,9 +9,11 @@ const cardList = document.querySelector(".cards");
 
 function renderModal(data) {
   const modalImg = document.querySelector(".modal-img");
+  const modalWrapImg = document.querySelector(".modal-wrap-img");
   const modalList = document.querySelector(".modal-list");
   modalList.innerHTML = "";
 
+  modalWrapImg.src = data._embedded.events[0].images.find(el => el.width === 640 && el.height === 427).url;
   modalImg.src = data._embedded.events[0].images.find(el => el.width === 205 && el.height === 115).url;
 
   if (data === "Data not found!") {
@@ -35,7 +37,7 @@ function renderModal(data) {
             <li class="modal-list-item">
               <h2 class="modal-list-title">WHO</h2>
               <p class="modal-list-desc author-desc">${data._embedded.events[0]._embedded.attractions[0].name === undefined ? "Not found" : data._embedded.events[0]._embedded.attractions[0].name}</p>
-            </li>  
+            </li>
             `
   );
 };
@@ -110,3 +112,4 @@ function moreFromThisAuthor(e) {
 }
 
 export { renderModalData };
+

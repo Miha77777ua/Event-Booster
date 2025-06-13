@@ -14,7 +14,7 @@
     display: none;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 272px;
     height: 597px;
     border-top-left-radius: 150px;
     border-bottom-right-radius: 150px;
@@ -23,6 +23,19 @@
     background-color: rgba(255, 242, 253, 1);
     padding: 75px 20px 104px 20px ;
 
+    @media  screen and (min-width: 768px) {
+        width: 595px;
+        height: 631px;
+        border-top-left-radius: 300px;
+        border-bottom-right-radius: 300px;
+        padding: 28px 17px  56px  50px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 730px;
+        height: 673px;
+        padding: 62px 30px;
+    }
+
     &-img{
         object-fit: cover;
         border-radius: 50%;
@@ -30,16 +43,27 @@
         height: 102px;
         margin: 0 auto;
         margin-bottom: 18px;
+            @media  screen and (min-width: 768px) {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 43px;
+            }
+            @media  screen and (min-width: 1200px) {
+                width: 132px;
+                height: 132px;
+                margin-bottom: 41px;
+            }
     }
 }
 
 .modal-list{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    gap: 10px;
+    margin-bottom: 25px;
+    @media  screen and (min-width: 1200px) {
+        gap: 20px;
+    }
 
     &-title{
         font-family: Montserrat;
@@ -50,6 +74,13 @@
         text-align: center;
         color:rgba(220, 86, 197, 1);
         margin-bottom: 5px;
+        @media  screen and (min-width: 768px) {
+            text-align: left;
+        }
+        @media  screen and (min-width: 1200px) {
+            margin-bottom:7px;
+            font-size: 24px;
+        }
     }
 
     &-desc{
@@ -59,14 +90,20 @@
         line-height: 100%;
         letter-spacing: 0%;
         text-align: center;
-        margin-top: 10px;
+        @media  screen and (min-width: 768px) {
+            text-align: left;
+        }
+        @media  screen and (min-width: 1200px) {
+            font-size: 18px;
+            
     }
+}
 }
 
 .modal-author-btn{
     display: block;
     margin: 0 auto;
-    margin-top: 40px;
+    
     font-family: Montserrat;
     font-weight: 500;
     font-size: 16px;
@@ -77,6 +114,10 @@
     border-radius: 5px;
     border: 1px solid rgba(76, 0, 254, 1);
     padding: 10px 3px;
+    @media  screen and (min-width: 768px) {
+        margin-top: 43px;
+        padding: 10px 16px;
+    }
 }
 
 .modal-close-btn{
@@ -86,6 +127,12 @@
     background-color: transparent;
     top: 25px;
     right: 25px;
+    @media screen and (min-width: 1200px) {
+        height: 25px;
+        width: 25px;
+        top: 30px;
+        right: 30px;
+    }
 }
 
 .error {
@@ -104,4 +151,35 @@
   color: #DC56C5;
   text-align: center;
 }
+
+.location-desc{
+    margin-top: 3px;
+}
+
+.modal-wrap-img{
+    display: none;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    @media  screen and (min-width: 768px) {
+        display: block;
+        width: 233px;
+        height: 316px;
+        object-fit: cover;
+    }
+    @media  screen and (min-width: 1200px) {
+        width: 360px;
+        height: 300px;
+    }
+}
+
+.modal-wrap{
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-content: flex-start;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
 
