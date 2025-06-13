@@ -2,7 +2,7 @@ import { cards } from "./cards";
 
 const modal = document.querySelector(".modal");
 const backdrop = document.querySelector(".backdrop");
-const headerInput = document.querySelector(".header__input");
+const headerInput = document.querySelector(".header-input");
 const modalCloseBtn = document.querySelector(".modal-close-btn");
 
 const cardList = document.querySelector(".cards");

@@ -4,5 +4,10 @@ import { renderModalData } from "./modal.js";
 
 setupDropdown();
 setupSearch();
-cards(1);
 renderModalData();
+cards(1);
+
+setTimeout(() => {
+  document.querySelector(".overlay").classList.add("hidden");
+  document.querySelector(".cards").classList.remove("hidden");
+}, 1700);

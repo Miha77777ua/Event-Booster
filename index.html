@@ -11,11 +11,14 @@
     <link href="./css/main.min.css" rel="stylesheet">
   </head>
   <body>
+    <div class="overlay">
+      <span class="loader"></span>
+    </div>
     <header class="header">
-      <div class="header__container container">
-        <a class="header__logo" href="./">
+      <div class="header-container container">
+        <a class="header-logo" href="./">
           <img
-            class="header__img"
+            class="header-img"
             srcset="
               ./images/logo_header_tab.png 359w,
               ./images/logo_header_desk.png 477w,
@@ -24,32 +27,37 @@
             src="./images/logo_header_mob.png"
             alt="Logo">
         </a>
-       <h1 class="header__title">FIND BEST EVENTS <br>
-          AROUND THE WORLD
-       </h1>
-       <div class="header__inputs">
-       <div class="header__input-search">
-          <input class="header__input" type="text" placeholder="Start searching" />
-          <svg class="header-search-icon" widht="12" height="12">
-            <use href="./images/symbol-defs.svg#search-icon_header"></use>
-          </svg>
-       </div>
-       <div class="header__input-filter">
-         <div class="dropdown-toggle">Choose country</div>
-         <div class="dropdown-menu"></div>
-       </div>
-     </div>
-         </div>
-    </header>
-
-    <main class="main">
-      <div class="container">
-        <ul class="cards"></ul> 
+        <h1 class="header-title">FIND BEST EVENTS <br>
+            AROUND THE WORLD
+        </h1>
+        <div class="header-inputs">
+          <div class="header-input-search">
+            <input class="header-input" type="text" placeholder="Start searching" />
+            <svg class="header-search-icon" widht="12" height="12">
+              <use href="./images/symbol-defs.svg#search-icon_header"></use>
+            </svg>
+          </div>
+          <div class="header-input-filter">
+            <div class="dropdown-toggle">Choose country</div>
+            <div class="dropdown-menu"></div>
+          </div>
+        </div>
       </div>
-      <ul class="pagination"></ul>
-    </main>
+    </header>
+    
+    <div class="background">
+      <main class="main">
+        <div class="container">
+          <ul class="cards hidden"></ul> 
+        </div>
+        <ul class="pagination"></ul>
+      </main>
 
-    <footer class="footer"></footer>
+      <footer class="footer">
+        <p class="footer-text">© 2025 | All Rights Reserved<span class="footer-break">| Developed with <span class="footer-heart">♥</span> by GoITeens Students</span></p>
+      </footer>
+    </div>
+
     <div class="backdrop">
       <div class="modal">
         <img class="modal-img" src="" alt="Image">

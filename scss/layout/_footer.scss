@@ -1,0 +1,31 @@
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #939393;
+}
+
+.footer-text {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-heart {
+    color: red;
+}
+
+.footer-break {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    font-size: 16px;
+  }
+  .footer-break {
+    display: inline;
+    margin-top: 0;
+    margin-left: 5px;
+  }
+}

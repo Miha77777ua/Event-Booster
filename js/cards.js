@@ -28,7 +28,7 @@ function render(data) {
 
 async function cards(page) {
   const country = document.querySelector(".dropdown-toggle").textContent;
-  const searchValue = document.querySelector(".header__input").value;
+  const searchValue = document.querySelector(".header-input").value;
 
   try {
     let data;

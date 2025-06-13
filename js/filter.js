@@ -4,7 +4,7 @@ import data from "./countries.json";
 const dropdownToggle = document.querySelector(".dropdown-toggle");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 
-const search = document.querySelector(".header__input");
+const search = document.querySelector(".header-input");
 
 function renderByCountryCode(item) {
   if (item.textContent === "All") {

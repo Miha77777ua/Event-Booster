@@ -1,4 +1,4 @@
-.header__logo{
+.header-logo{
     position: absolute;
     display: block;
     width: 106px;
@@ -11,7 +11,7 @@
       height: 151px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1200px) {
       width: 239px;
       height: 201px;
     }
@@ -40,7 +40,7 @@
   }
 }
 
-.header__title{
+.header-title{
     font-family: 'Montserrat';
     font-weight: 900;
     font-size: 25px;

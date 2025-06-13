@@ -1,4 +1,4 @@
-.header__inputs {
+.header-inputs {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   }
 }
 
-.header__input-search {
+.header-input-search {
   display: flex;
   align-items: center;
   width: 300px;
@@ -41,7 +41,7 @@
   // }
 }
 
-.header__input {
+.header-input {
   // padding: 10px 70px 10px 30px;
   // width: 270px;
   // height: 40px;
@@ -56,7 +56,7 @@
   font-size: 16px;
 }
 
-.header__input::placeholder {
+.header-input::placeholder {
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 16px;
@@ -64,11 +64,11 @@
   color: #939393;
 }
 
-.header__btn {
+.header-btn {
   display: none;
 }
 
-.header__input-filter {
+.header-input-filter {
   position: relative;
   width: 300px;
 }
